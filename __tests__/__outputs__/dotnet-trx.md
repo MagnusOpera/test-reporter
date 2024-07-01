@@ -1,12 +1,13 @@
-![Tests failed](https://img.shields.io/badge/tests-5%20passed%2C%205%20failed%2C%201%20skipped-critical)
+[![Tests failed](https://img.shields.io/badge/tests-5%20passed%2C%205%20failed%2C%201%20skipped-critical)](#user-content-test-report)
+# <a name="user-content-test-report"></a> Tests report
 |Report|Passed|Failed|Skipped|Time|
 |:---|---:|---:|---:|---:|
-|fixtures/dotnet-trx.trx|5 ✅|5 ❌|1 ⚪|1s|
+|fixtures/dotnet-trx.trx|5|5|1|1s|
 ## ❌ <a id="user-content-r0" href="#r0">fixtures/dotnet-trx.trx</a>
 **11** tests were completed in **1s** with **5** passed, **5** failed and **1** skipped.
 |Test suite|Passed|Failed|Skipped|Time|
 |:---|---:|---:|---:|---:|
-|[DotnetTests.XUnitTests.CalculatorTests](#r0s0)|5 ✅|5 ❌|1 ⚪|118ms|
+|[DotnetTests.XUnitTests.CalculatorTests](#r0s0)|5|5|1|118ms|
 ### ❌ <a id="user-content-r0s0" href="#r0s0">DotnetTests.XUnitTests.CalculatorTests</a>
 ```
 ✅ Custom Name

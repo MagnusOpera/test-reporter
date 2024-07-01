@@ -1,49 +1,50 @@
-![Tests passed successfully](https://img.shields.io/badge/tests-833%20passed%2C%206%20skipped-success)
+[![Tests passed successfully](https://img.shields.io/badge/tests-833%20passed%2C%206%20skipped-success)](#user-content-test-report)
 <details><summary>Expand for details</summary>
  
+# <a name="user-content-test-report"></a> Tests report
 |Report|Passed|Failed|Skipped|Time|
 |:---|---:|---:|---:|---:|
-|fixtures/external/mocha/mocha-test-results.json|833 ✅||6 ⚪|6s|
+|fixtures/external/mocha/mocha-test-results.json|833||6|6s|
 ## ✅ <a id="user-content-r0" href="#r0">fixtures/external/mocha/mocha-test-results.json</a>
 **839** tests were completed in **6s** with **833** passed, **0** failed and **6** skipped.
 |Test suite|Passed|Failed|Skipped|Time|
 |:---|---:|---:|---:|---:|
-|[test/node-unit/buffered-worker-pool.spec.js](#r0s0)|14 ✅|||8ms|
-|[test/node-unit/cli/config.spec.js](#r0s1)|10 ✅|||8ms|
-|[test/node-unit/cli/node-flags.spec.js](#r0s2)|105 ✅|||9ms|
-|[test/node-unit/cli/options.spec.js](#r0s3)|36 ✅|||250ms|
-|[test/node-unit/cli/run-helpers.spec.js](#r0s4)|9 ✅|||8ms|
-|[test/node-unit/cli/run.spec.js](#r0s5)|40 ✅|||4ms|
-|[test/node-unit/mocha.spec.js](#r0s6)|24 ✅|||33ms|
-|[test/node-unit/parallel-buffered-runner.spec.js](#r0s7)|19 ✅|||23ms|
-|[test/node-unit/reporters/parallel-buffered.spec.js](#r0s8)|6 ✅|||16ms|
-|[test/node-unit/serializer.spec.js](#r0s9)|40 ✅|||31ms|
-|[test/node-unit/stack-trace-filter.spec.js](#r0s10)|2 ✅||4 ⚪|1ms|
-|[test/node-unit/utils.spec.js](#r0s11)|5 ✅|||1ms|
-|[test/node-unit/worker.spec.js](#r0s12)|15 ✅|||92ms|
-|[test/unit/context.spec.js](#r0s13)|8 ✅|||5ms|
-|[test/unit/duration.spec.js](#r0s14)|3 ✅|||166ms|
-|[test/unit/errors.spec.js](#r0s15)|13 ✅|||5ms|
-|[test/unit/globals.spec.js](#r0s16)|4 ✅|||0ms|
-|[test/unit/grep.spec.js](#r0s17)|8 ✅|||2ms|
-|[test/unit/hook-async.spec.js](#r0s18)|3 ✅|||1ms|
-|[test/unit/hook-sync-nested.spec.js](#r0s19)|4 ✅|||1ms|
-|[test/unit/hook-sync.spec.js](#r0s20)|3 ✅|||0ms|
-|[test/unit/hook-timeout.spec.js](#r0s21)|1 ✅|||0ms|
-|[test/unit/hook.spec.js](#r0s22)|4 ✅|||0ms|
-|[test/unit/mocha.spec.js](#r0s23)|115 ✅||1 ⚪|128ms|
-|[test/unit/overspecified-async.spec.js](#r0s24)|1 ✅|||3ms|
-|[test/unit/parse-query.spec.js](#r0s25)|2 ✅|||1ms|
-|[test/unit/plugin-loader.spec.js](#r0s26)|41 ✅||1 ⚪|16ms|
-|[test/unit/required-tokens.spec.js](#r0s27)|1 ✅|||0ms|
-|[test/unit/root.spec.js](#r0s28)|1 ✅|||0ms|
-|[test/unit/runnable.spec.js](#r0s29)|55 ✅|||122ms|
-|[test/unit/runner.spec.js](#r0s30)|77 ✅|||43ms|
-|[test/unit/suite.spec.js](#r0s31)|57 ✅|||14ms|
-|[test/unit/test.spec.js](#r0s32)|15 ✅|||0ms|
-|[test/unit/throw.spec.js](#r0s33)|9 ✅|||9ms|
-|[test/unit/timeout.spec.js](#r0s34)|8 ✅|||109ms|
-|[test/unit/utils.spec.js](#r0s35)|75 ✅|||24ms|
+|[test/node-unit/buffered-worker-pool.spec.js](#r0s0)|14|||8ms|
+|[test/node-unit/cli/config.spec.js](#r0s1)|10|||8ms|
+|[test/node-unit/cli/node-flags.spec.js](#r0s2)|105|||9ms|
+|[test/node-unit/cli/options.spec.js](#r0s3)|36|||250ms|
+|[test/node-unit/cli/run-helpers.spec.js](#r0s4)|9|||8ms|
+|[test/node-unit/cli/run.spec.js](#r0s5)|40|||4ms|
+|[test/node-unit/mocha.spec.js](#r0s6)|24|||33ms|
+|[test/node-unit/parallel-buffered-runner.spec.js](#r0s7)|19|||23ms|
+|[test/node-unit/reporters/parallel-buffered.spec.js](#r0s8)|6|||16ms|
+|[test/node-unit/serializer.spec.js](#r0s9)|40|||31ms|
+|[test/node-unit/stack-trace-filter.spec.js](#r0s10)|2||4|1ms|
+|[test/node-unit/utils.spec.js](#r0s11)|5|||1ms|
+|[test/node-unit/worker.spec.js](#r0s12)|15|||92ms|
+|[test/unit/context.spec.js](#r0s13)|8|||5ms|
+|[test/unit/duration.spec.js](#r0s14)|3|||166ms|
+|[test/unit/errors.spec.js](#r0s15)|13|||5ms|
+|[test/unit/globals.spec.js](#r0s16)|4|||0ms|
+|[test/unit/grep.spec.js](#r0s17)|8|||2ms|
+|[test/unit/hook-async.spec.js](#r0s18)|3|||1ms|
+|[test/unit/hook-sync-nested.spec.js](#r0s19)|4|||1ms|
+|[test/unit/hook-sync.spec.js](#r0s20)|3|||0ms|
+|[test/unit/hook-timeout.spec.js](#r0s21)|1|||0ms|
+|[test/unit/hook.spec.js](#r0s22)|4|||0ms|
+|[test/unit/mocha.spec.js](#r0s23)|115||1|128ms|
+|[test/unit/overspecified-async.spec.js](#r0s24)|1|||3ms|
+|[test/unit/parse-query.spec.js](#r0s25)|2|||1ms|
+|[test/unit/plugin-loader.spec.js](#r0s26)|41||1|16ms|
+|[test/unit/required-tokens.spec.js](#r0s27)|1|||0ms|
+|[test/unit/root.spec.js](#r0s28)|1|||0ms|
+|[test/unit/runnable.spec.js](#r0s29)|55|||122ms|
+|[test/unit/runner.spec.js](#r0s30)|77|||43ms|
+|[test/unit/suite.spec.js](#r0s31)|57|||14ms|
+|[test/unit/test.spec.js](#r0s32)|15|||0ms|
+|[test/unit/throw.spec.js](#r0s33)|9|||9ms|
+|[test/unit/timeout.spec.js](#r0s34)|8|||109ms|
+|[test/unit/utils.spec.js](#r0s35)|75|||24ms|
 ### ✅ <a id="user-content-r0s0" href="#r0s0">test/node-unit/buffered-worker-pool.spec.js</a>
 ```
 class BufferedWorkerPool constructor

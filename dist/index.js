@@ -1845,7 +1845,7 @@ function getBadge(passed, failed, skipped, options) {
     }
     const hint = failed > 0 ? 'Tests failed' : 'Tests passed successfully';
     const uri = encodeURIComponent(`${options.badgeTitle}-${message}-${color}`);
-    return `![${hint}](https://img.shields.io/badge/${uri})`;
+    return `[![${hint}](https://img.shields.io/badge/${uri})](#user-content-test-report)`;
 }
 function getTestRunsReport(testRuns, options) {
     const sections = [];
@@ -1854,15 +1854,16 @@ function getTestRunsReport(testRuns, options) {
         sections.push(`<details><summary>Expand for details</summary>`);
         sections.push(` `);
     }
+    sections.push('# <a name="user-content-test-report"></a> Tests report');
     if (testRuns.length > 0 || options.onlySummary) {
         const tableData = testRuns
             .filter(tr => tr.passed > 0 || tr.failed > 0 || tr.skipped > 0)
             .map(tr => {
             const time = (0, markdown_utils_1.formatTime)(tr.time);
             const name = tr.path;
-            const passed = tr.passed > 0 ? `${tr.passed} ${markdown_utils_1.Icon.success}` : '';
-            const failed = tr.failed > 0 ? `${tr.failed} ${markdown_utils_1.Icon.fail}` : '';
-            const skipped = tr.skipped > 0 ? `${tr.skipped} ${markdown_utils_1.Icon.skip}` : '';
+            const passed = tr.passed > 0 ? `${tr.passed}` : '';
+            const failed = tr.failed > 0 ? `${tr.failed}` : '';
+            const skipped = tr.skipped > 0 ? `${tr.skipped}` : '';
             return [name, passed, failed, skipped, time];
         });
         const resultsTable = (0, markdown_utils_1.table)(['Report', 'Passed', 'Failed', 'Skipped', 'Time'], [markdown_utils_1.Align.Left, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right], ...tableData);
@@ -1897,9 +1898,9 @@ function getSuitesReport(tr, runIndex, options) {
                 const skipLink = options.listTests === 'none' || (options.listTests === 'failed' && s.result !== 'failed');
                 const tsAddr = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link;
                 const tsNameLink = skipLink ? tsName : (0, markdown_utils_1.link)(tsName, tsAddr);
-                const passed = s.passed > 0 ? `${s.passed} ${markdown_utils_1.Icon.success}` : '';
-                const failed = s.failed > 0 ? `${s.failed} ${markdown_utils_1.Icon.fail}` : '';
-                const skipped = s.skipped > 0 ? `${s.skipped} ${markdown_utils_1.Icon.skip}` : '';
+                const passed = s.passed > 0 ? `${s.passed}` : '';
+                const failed = s.failed > 0 ? `${s.failed}` : '';
+                const skipped = s.skipped > 0 ? `${s.skipped}` : '';
                 return [tsNameLink, passed, failed, skipped, tsTime];
             }));
             sections.push(suitesTable);

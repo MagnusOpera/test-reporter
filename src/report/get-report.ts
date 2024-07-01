@@ -138,7 +138,7 @@ function getBadge(passed: number, failed: number, skipped: number, options: Repo
   }
   const hint = failed > 0 ? 'Tests failed' : 'Tests passed successfully'
   const uri = encodeURIComponent(`${options.badgeTitle}-${message}-${color}`)
-  return `![${hint}](https://img.shields.io/badge/${uri})`
+  return `[![${hint}](https://img.shields.io/badge/${uri})](#user-content-test-report)`
 }
 
 function getTestRunsReport(testRuns: TestRunResult[], options: ReportOptions): string[] {
@@ -149,15 +149,17 @@ function getTestRunsReport(testRuns: TestRunResult[], options: ReportOptions): s
     sections.push(` `)
   }
 
+  sections.push('# <a name="user-content-test-report"></a> Tests report')
+
   if (testRuns.length > 0 || options.onlySummary) {
     const tableData = testRuns
       .filter(tr => tr.passed > 0 || tr.failed > 0 || tr.skipped > 0)
       .map(tr => {
         const time = formatTime(tr.time)
         const name = tr.path
-        const passed = tr.passed > 0 ? `${tr.passed} ${Icon.success}` : ''
-        const failed = tr.failed > 0 ? `${tr.failed} ${Icon.fail}` : ''
-        const skipped = tr.skipped > 0 ? `${tr.skipped} ${Icon.skip}` : ''
+        const passed = tr.passed > 0 ? `${tr.passed}` : ''
+        const failed = tr.failed > 0 ? `${tr.failed}` : ''
+        const skipped = tr.skipped > 0 ? `${tr.skipped}` : ''
         return [name, passed, failed, skipped, time]
       })
 
@@ -207,9 +209,9 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
           const skipLink = options.listTests === 'none' || (options.listTests === 'failed' && s.result !== 'failed')
           const tsAddr = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link
           const tsNameLink = skipLink ? tsName : link(tsName, tsAddr)
-          const passed = s.passed > 0 ? `${s.passed} ${Icon.success}` : ''
-          const failed = s.failed > 0 ? `${s.failed} ${Icon.fail}` : ''
-          const skipped = s.skipped > 0 ? `${s.skipped} ${Icon.skip}` : ''
+          const passed = s.passed > 0 ? `${s.passed}` : ''
+          const failed = s.failed > 0 ? `${s.failed}` : ''
+          const skipped = s.skipped > 0 ? `${s.skipped}` : ''
           return [tsNameLink, passed, failed, skipped, tsTime]
         })
       )
